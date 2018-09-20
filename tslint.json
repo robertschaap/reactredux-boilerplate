@@ -12,6 +12,8 @@
     ]
   },
   "rules": {
+    "jsx-space-before-trailing-slash": [true],
+
     "ter-indent": [true, 2],
     "object-curly-spacing": [true, "always"]
   }
