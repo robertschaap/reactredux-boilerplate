@@ -121,6 +121,8 @@ module.exports = {
                     loader: require.resolve('style-loader'),
                     options: {
                       hmr: false,
+                      modules: true,
+                      localIdentName: "[name]-[local]-[hash:base64:5]"
                     },
                   },
                   use: [
@@ -155,6 +157,25 @@ module.exports = {
                 extractTextPluginOptions
               )
             ),
+          },
+          {
+            test: /\.scss$/,
+            use: [
+              require.resolve('style-loader'),
+              {
+                loader: require.resolve('css-loader'),
+                options: {
+                  modules: true,
+                  localIdentName: "[name]-[local]-[hash:base64:5]"
+                },
+              },
+              {
+                loader: require.resolve('sass-loader'),
+                options: {
+                  sourceMap: true
+                },
+              },
+            ],
           },
           {
             loader: require.resolve('file-loader'),
