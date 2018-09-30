@@ -13,6 +13,8 @@
   },
   "rules": {
     "jsx-space-before-trailing-slash": [true],
+    "jsx-no-multiline-js": [false],
+    "jsx-no-lambda": [false],
 
     "ter-indent": [true, 2],
     "object-curly-spacing": [true, "always"]
